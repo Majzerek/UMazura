@@ -404,6 +404,7 @@ header {
 		width: 100%;
 		text-align: center;
 		& .name {
+			text-decoration: none;
 			font-weight: bold;
 			animation: footer 4s infinite;
 		}
