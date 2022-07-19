@@ -1,0 +1,79 @@
+@use 'colors.scss' as c;
+@keyframes pulse {
+	from {
+		transform: scale(1);
+		opacity: 0.5;
+	}
+	to {
+		transform: scale(1.4);
+		opacity: 0;
+	}
+}
+@keyframes bounce-top {
+	0% {
+		transform: translateY(-45px);
+		animation-timing-function: ease-in;
+		opacity: 0;
+	}
+	24% {
+		opacity: 1;
+	}
+	40% {
+		transform: translateY(-24px);
+		animation-timing-function: ease-in;
+	}
+	65% {
+		transform: translateY(-8px);
+		animation-timing-function: ease-in;
+	}
+	82% {
+		transform: translateY(-4px);
+		animation-timing-function: ease-in;
+	}
+	93% {
+		transform: translateY(50px);
+		animation-timing-function: ease-in;
+	}
+	25%,
+	55%,
+	75%,
+	87% {
+		transform: translateY(0);
+		animation-timing-function: ease-out;
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(0);
+		animation-timing-function: ease-out;
+		opacity: 0;
+	}
+}
+
+@keyframes colorchanger {
+	0% {
+		color:c.$info-color;
+	}
+	25% {
+		color:c.$main-color;
+	}
+	50% {
+		color: c.$footer-bg
+	}
+	75% {
+		color : c.$section-light
+	}
+	100% {
+		color: c.$info-color;
+	}
+}
+@keyframes footer {
+	0% {
+		color: c.$bg-dark
+	}
+	50% {
+		color: c.$section-pure;
+	}
+	100% {
+		color: c.$bg-dark;
+	}
+}
