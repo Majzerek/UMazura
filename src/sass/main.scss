@@ -392,7 +392,7 @@ header {
 		display: flex;
 		justify-content: center;
 		text-align: center;
-		font-size: 3rem;
+		font-size: 2rem;
 		font-weight: 600;
 		font-family: 'Pacifico', cursive;
 	}
@@ -400,7 +400,7 @@ header {
 		margin: 2em auto 0 auto;
 		padding: 1em;
 		color:$section-pure;
-		font-size: 3.5rem;
+		font-size: 1.5rem;
 	
 	}
 	&-quotes {
@@ -423,7 +423,6 @@ header {
 //offers
 .offers {
 	margin: 4em auto 5em;
-	// padding: 2em;
 	background-color: $section-pure;
 	&-title {
 		color: $bg-dark;
@@ -490,13 +489,13 @@ header {
 		
 			h3 {
 				padding: 1em;
-				font-size: 3rem;
+				font-size: 2rem;
 				border-bottom: 8px solid $section-pure;
 				
 			}
 			p {
 				padding: 1em;
-				font-size: 2rem;
+				font-size: 1.6rem;
 			}
 		}
 	}
@@ -741,6 +740,12 @@ header {
 			font-size: 3.5rem;
 		}
 		&-text {
+			font-size: 2.5rem;
+		}
+		.quotes-text {
+			font-size: 3rem;
+		}
+		&__text-quote {
 			font-size: 2.5rem;
 		}
 	}
