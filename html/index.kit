@@ -16,9 +16,9 @@
     <!-- Navigacja -->
     <!-- @include 'nav.kit' -->
     <!-- header -->
-    <header class="header" id="home">
+    <header class="header white-section" id="home">
         <header class="header" id="home">
-            <div class="hero-img">
+            <div class="hero-img ">
                 <div class="hero-bg"></div>
                 <div class="hero-text">
                     <h1>Witamy w Sklepie<span class="color-text"> "U Mazura"</span></h1>
@@ -38,7 +38,7 @@
         <!-- Main -->
         <main>
             <!-- section news -->
-            <section class="news section " id="news">
+            <section class="news section white-section" id="news">
                  
                 <div class="card">
                    <h2 class="card-title ">News</h2>
@@ -194,7 +194,27 @@
                 </div>
             </section>
             <!-- section contact -->
-            <section id="contact" class="contact section"></section>
+            <section id="contact" class="contact section white-section">
+                <div class="hero-bg"></div>
+                <form class="contact__form wrapper">
+                    <div class="contact__form-top">
+                        <label for="name" class="contact__form-label">Imię i nazwisko:</label>
+                        <input type="text" class="contact__form-input" id="name">
+
+                        <label for="email" class="contact__form-label">Adres e-mail:</label>
+                        <input type="text" id="email" class="contact__form-input">
+                    </div>
+
+                    <label for="msg" class="contact__form-label">Wiadomość:</label>
+                    <textarea id="msg" class="contact__form-textarea"></textarea>
+
+                    <button type="submit" class="contact__form-btn btn-special-animation">Wyślij</button>
+                </form>
+                <div class="contact-standard">
+                   <p>Numer Telefonu:<a href="tel:+48 695078847"> 695-078-847</a></p>
+                   <p>Adres E-mail: <a href="mailto:majzermariusz@gmail.com">kontakt.sklep@umazura.pl</a></p>
+                </div>
+            </section>
         </main>
 
 
