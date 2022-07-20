@@ -58,8 +58,6 @@ body {
 }
 .border-right {
 	border-bottom-right-radius: 50px;
-	
-	// transform: rotate(-2deg);
 }
 
 .border-left {
@@ -120,7 +118,7 @@ body {
 		right: 0;
 		height: 3px;
 		content: '';
-		background-image: $blue-gradient;
+		background-image: $light-blue-gradient;
 		transition: width 0.3s;
 		
 	}
@@ -151,7 +149,7 @@ body {
 	width: 100%;
 	transform: translateX(100%);
 	transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
-	background-image: $nav-bg;
+	background-image: $nav-bg-light;
 	z-index: 100;
 
 	&--active {
@@ -390,9 +388,16 @@ header {
 			align-items: center;
 		}
 	}
+	.quotes-text {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 3rem;
+		font-weight: bold;
+	}
 	&__text-quote {
 		color:$section-pure;
-		font-size: 2rem;
+		font-size: 3.5rem;
 
 	}
 	&-quotes {
@@ -404,9 +409,8 @@ header {
 		flex-direction: column;
 		&__frame {
 			margin: 1em;
-			max-width: 600px;
 			width: 100%;
-			height: 300px;
+			height: 100%;
 			background-color: $section-pure;
 			border: 4px solid $main-color;
 		}
@@ -551,8 +555,8 @@ header {
 		align-self: flex-end;
 		padding: 1em;
 		width: 100%;
-		max-width: 300px;
-		font-size: 2rem;
+		max-width: 150px;
+		font-size: 1.6rem;
 		color: $section-pure;
 		border: none;
 		border-radius: 8px;
@@ -632,7 +636,10 @@ header {
 		&__bars {
 			color: $main-color;
 		}
-	}
+	}	
+	
+
+	
 }
 @media (min-width: 768px) {
 	.title {
@@ -741,4 +748,5 @@ header {
 			font-size: 2rem;
 		}
 	}
+	
 }
