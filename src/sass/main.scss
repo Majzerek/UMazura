@@ -11,7 +11,7 @@ html {
 }
 body {
 	font-family: 'Montserrat', sans-serif;
-	background-color: #333;
+	background-color: $section-pure;
 }
 .wrapper {
 	margin: 0 auto;
@@ -58,13 +58,12 @@ body {
 }
 .border-right {
 	border-bottom-right-radius: 50px;
-	box-shadow: 5px 8px 6px rgba(252, 87, 95);
+	
 	// transform: rotate(-2deg);
 }
 
 .border-left {
 	border-bottom-left-radius: 50px;
-	box-shadow: -5px 8px 6px rgba(252, 87, 95);
 }
 .img {
 	margin: 2em;
@@ -318,9 +317,9 @@ header {
 	}
 	&-title {
 		padding: 0.2em;
-		font-family: 'Black Ops One', cursive;
 		color: $info-color;
 		text-shadow: 0 0 5px $bg-dark;
+		font-weight: 500;
 		text-transform: uppercase;
 		animation: colorchanger 5s infinite;
 	}
@@ -336,16 +335,23 @@ header {
 //section about us
 .aboutus {
 	background-color: $bg-dark;
+	&-title {
+		color:$section-pure;
+	}
+	h3 {
+		color:$bg-dark;
+	}
 	&-h3 {
 		text-align: center;
-		padding-left: 0.5em;
 		font-size: 2.5rem;
+		color: $section-pure;
 		border-bottom: 8px solid $bg-dark;
 	}
 	&-text {
 		margin: 0.5em;
 		padding: 1em;
 		max-width: 800px;
+		color: $bg-dark;
 		font-size: 1.5rem;
 		text-align: center;
 	}
@@ -384,7 +390,11 @@ header {
 			align-items: center;
 		}
 	}
+	&__text-quote {
+		color:$section-pure;
+		font-size: 2rem;
 
+	}
 	&-quotes {
 		margin: 1em;
 		padding: 1em;
@@ -404,8 +414,8 @@ header {
 }
 //offers
 .offers {
-	margin: 2em;
-	padding: 2em;
+	margin: 4em auto 5em;
+	// padding: 2em;
 	background-color: $section-pure;
 	&-title {
 		color: $bg-dark;
@@ -440,9 +450,12 @@ header {
 
 //location
 .location {
+	padding-bottom: 2em;
 	width: 100%;
 	background-color: $bg-dark;
-
+	&-title {
+		color:$section-pure;
+	}
 	&-container {
 		margin: 0.5em;
 		padding: 1em;
@@ -465,10 +478,13 @@ header {
 		&__text {
 			padding: 3em;
 			text-align: center;
+			color:$section-pure;
+		
 			h3 {
 				padding: 1em;
 				font-size: 3rem;
 				border-bottom: 8px solid $section-pure;
+				
 			}
 			p {
 				padding: 1em;
@@ -477,42 +493,7 @@ header {
 		}
 	}
 }
-// footer
-.footer {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100px;
-	font-size: 1.2rem;
-	background-image: $blue-gradient;
-	&-creator {
-		.turn {
-			transform: rotateY(180deg);
-		}
-		a {
-			text-decoration: none;
-			color: $section-pure;
-			animation: footer 4s infinite;
-			font-weight: bold;
-		}
-	}
-	&-line {
-		padding: 0.5em;
-		width: 100%;
-	}
-	&-bottom {
-		padding: 0.2em;
-		width: 100%;
-		text-align: center;
-		& .name {
-			text-decoration: none;
-			font-weight: bold;
-			animation: footer 4s infinite;
-		}
-	}
-}
+
 //  contact
 .contact {
 	padding: 1em;
@@ -590,7 +571,6 @@ header {
 		margin: .5em;
 		p{
 			padding: 1em;
-			animation: footer 4s infinite;
 			font-weight: bold;
 		}
 		a{
@@ -600,6 +580,41 @@ header {
 		}
 		a:hover {
 			color: $info-color;
+		}
+	}
+}
+// footer
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100px;
+	font-size: 1.2rem;
+	background-image: $blue-gradient;
+	&-creator {
+		.turn {
+			transform: rotateY(180deg);
+		}
+		a {
+			text-decoration: none;
+			color: $bg-dark;
+			font-weight: bold;
+		}
+	}
+	&-line {
+		padding: 0.5em;
+		width: 100%;
+	}
+	&-bottom {
+		padding: 0.2em;
+		width: 100%;
+		text-align: center;
+		& .name {
+			text-decoration: none;
+			font-weight: bold;
+			color:$info-color;
 		}
 	}
 }
@@ -687,17 +702,17 @@ header {
 		max-width: 1600px;
 	}
 	.title {
-		font-size: 4rem;
+		font-size: 3rem;
 	}
 	header {
 		color: white;
 
 		.hero-text {
 			h1 {
-				font-size: 6rem;
+				font-size: 5rem;
 			}
 			p {
-				font-size: 4rem;
+				font-size: 3rem;
 			}
 		}
 		.hero-img {
@@ -705,9 +720,9 @@ header {
 		}
 	}
 	.card {
-		font-size: 5rem;
+		font-size: 4rem;
 		&__info-text {
-			font-size: 3rem;
+			font-size: 2rem;
 		}
 	}
 	.aboutus {
@@ -720,10 +735,10 @@ header {
 	}
 	.text {
 		h3 {
-			font-size: 5rem;
+			font-size: 4rem;
 		}
 		p {
-			font-size: 3rem;
+			font-size: 2rem;
 		}
 	}
 }
