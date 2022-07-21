@@ -397,6 +397,7 @@ header {
 	}
 
 	&-quotes {
+		margin-top: 3em;
 		padding: 2em;
 		display: flex;
 		justify-content: center;
@@ -420,21 +421,24 @@ header {
 		font-size: 1.5rem;
 		font-weight: 600;
 		font-style: italic;
+		text-shadow: 2px 2px 8px $section-pure;
 	}
 	.link {
 		margin-top: 2em;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-
 		text-align: center;
-		font-size: 1.6rem;
+		font-size: 1.2rem;
 		a {
+			padding: 0.5em;
 			text-decoration: none;
 			color: $section-pure;
+			transition: color .5s;
 		}
 		a:hover {
-			color: $info-color;
+			color: $section-light;
 		}
 	}
 }
@@ -580,15 +584,18 @@ header {
 		color: $section-pure;
 		border: none;
 		border-radius: 8px;
-		background-color: $bg-shadow;
+		background-color: $bg-dark;
+		box-shadow: 2px 2px 8px $bg-dark;
+		transition: background-color .5s;
 		cursor: pointer;
 
 		&::before {
 			background-color: $bg-dark;
+			
 		}
 	}
 	&__form-btn:hover {
-		background-image: $nav-bg;
+		background-color: $info-color;
 	}
 	&-standard {
 		margin: 0.5em;
@@ -601,6 +608,7 @@ header {
 			text-decoration: none;
 			color: $bg-dark;
 			font-weight: 500;
+			transition: color .3s;
 		}
 		a:hover {
 			color: $info-color;
@@ -624,6 +632,9 @@ header {
 			color: $section-pure;
 			font-weight: bold;
 		}
+		a:hover {
+			color: $info-color;
+		}
 	}
 	&-line {
 		padding: 0.5em;
@@ -638,6 +649,9 @@ header {
 			text-decoration: none;
 			font-weight: bold;
 			color: $info-color;
+		}
+		& .name:hover {
+			color: $section-pure;
 		}
 	}
 }
@@ -767,13 +781,17 @@ header {
 		&__text-quote {
 			font-size: 2.5rem;
 		}
-	}
-	.text {
-		h3 {
-			font-size: 4rem;
+		.link {
+			font-size: 1.6rem;
 		}
-		p {
-			font-size: 2rem;
+		.text {
+			h3 {
+				font-size: 4rem;
+			}
+			p {
+				font-size: 2rem;
+			}
 		}
 	}
+
 }
