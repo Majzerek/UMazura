@@ -20,14 +20,13 @@ body {
 }
 .color-text {
 	color: $info-color;
-	text-shadow: 2px 2px 8px $main-color;
+	text-shadow: 2px 2px 8px $bg-dark;
 }
 .section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	height: 100%;
 	overflow: hidden;
 }
 .title {
@@ -66,12 +65,12 @@ body {
 .img {
 	margin: 2em;
 	img {
-		width: 100%;
-		height: 100%;
+		// width: 100%;
+		// height: 100%;
 		min-width: 180px;
-		min-height: 300px;
-		max-width: 800px;
-		max-height: 500px;
+		min-height: 200px;
+		max-width: 500px;
+		max-height: 300px;
 		border-radius: 10px;
 		box-shadow: 2px 2px 8px $bg-dark;
 		transition: transform 0.3s;
@@ -107,7 +106,7 @@ body {
 .show-news {
 	margin-top: 1em;
 	padding: 0.5em;
-	font-size: 2rem;
+	font-size: 1.8rem;
 	width: 100%;
 	color: $section-pure;
 	border: none;
@@ -365,8 +364,8 @@ header {
 	}
 	&__info-text {
 		padding: 1em;
-		font-size: 1.6rem;
-		color: $bg-dark;
+		font-size: 1.8rem;
+		color: $section-pure;
 	}
 }
 //section about us
@@ -388,7 +387,7 @@ header {
 	&-text {
 		margin: 0.5em;
 		padding: 1em;
-		max-width: 800px;
+		// max-width: 800px;
 		color: $bg-dark;
 		font-size: 1.5rem;
 		text-align: center;
@@ -412,16 +411,6 @@ header {
 		width: 100%;
 		height: 100%;
 
-		img {
-			margin: 0;
-			width: 100%;
-			height: 100%;
-			min-width: 180px;
-			min-height: 300px;
-			max-width: 600px;
-			max-height: 400px;
-			object-fit: cover;
-		}
 		&-container2 {
 			margin: 1em;
 			padding: 2em;
@@ -765,14 +754,14 @@ header {
 		}
 	}
 	.footer {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 	.contact {
-		font-size: 2rem;
+		font-size: 1.8rem;
 		background-image: url('../img/header.jpg');
 		&-standard {
 			p {
-				font-size: 2rem;
+				font-size: 1.8rem;
 			}
 		}
 	}
@@ -801,21 +790,21 @@ header {
 	.card {
 		font-size: 2rem;
 		&__info-text {
-			font-size: 1.8rem;
+			font-size: 2rem;
 		}
 	}
 	.aboutus {
 		&-h3 {
-			font-size: 2.5rem;
+			font-size: 2rem;
 		}
 		&-text {
 			font-size: 1.8rem;
 		}
 		.quotes-text {
-			font-size: 2.5rem;
+			font-size: 2rem;
 		}
 		&__text-quote {
-			font-size: 2.5rem;
+			font-size: 2rem;
 		}
 		.link {
 			font-size: 1.6rem;
@@ -823,7 +812,7 @@ header {
 	}
 	.text {
 		h3 {
-			font-size: 2.5rem;
+			font-size: 2rem;
 		}
 		p {
 			font-size: 1.8rem;
