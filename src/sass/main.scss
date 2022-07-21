@@ -28,6 +28,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 	height: 100%;
+	overflow: hidden;
 }
 .title {
 	margin: 1em;
@@ -82,7 +83,7 @@ body {
 .fade-in {
 	opacity: 0;
 	transition: opacity 400ms ease-in;
-} 
+}
 .fade-in.appear {
 	opacity: 1;
 }
@@ -94,14 +95,31 @@ body {
 	transform: translateX(-50%);
 	opacity: 0;
 }
-.from-right, .from-left{
-	transition:opacity 400ms, transform 400ms ease-in;
+.from-right,
+.from-left {
+	transition: opacity 400ms, transform 400ms ease-in;
 }
-.from-right.appear, .from-left.appear{
+.from-right.appear,
+.from-left.appear {
 	transform: translateX(0);
 	opacity: 1;
 }
-
+.show-news {
+	margin-top: 1em;
+	padding: 0.5em;
+	font-size: 2rem;
+	width: 100%;
+	color: $section-pure;
+	border: none;
+	background-color: $section-light;
+	box-shadow: 8px 8px 8px $section-pure;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+.show-news:hover {
+	background-color: $main-color;
+}
 // NAV
 .burger-btn {
 	position: fixed;
@@ -319,11 +337,11 @@ header {
 }
 // section News
 .news {
-	display: none;
 	width: 100%;
 	background-color: $bg-dark;
 }
 .card {
+	display: none;
 	width: 100%;
 	height: 100%;
 	text-align: center;
@@ -458,7 +476,7 @@ header {
 			padding: 0.5em;
 			text-decoration: none;
 			color: $section-pure;
-			transition: color .5s;
+			transition: color 0.5s;
 		}
 		a:hover {
 			color: $section-light;
@@ -467,7 +485,7 @@ header {
 }
 //offers
 .offers {
-	margin: 4em auto 5em;
+	margin: 2em auto 3em;
 	background-color: $section-pure;
 	&-title {
 		color: $bg-dark;
@@ -476,8 +494,9 @@ header {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		width: 90%;
 		color: $bg-dark;
-		
+
 		&__cards {
 			padding: 2em;
 			display: flex;
@@ -610,16 +629,15 @@ header {
 		border-radius: 8px;
 		background-color: $bg-dark;
 		box-shadow: 2px 2px 8px $bg-dark;
-		transition: background-color .5s;
+		transition: background-color 0.5s;
 		cursor: pointer;
 
 		&::before {
 			background-color: $bg-dark;
-			
 		}
 	}
 	&__form-btn:hover {
-		background-color: $info-color;
+		background-color: $main-color;
 	}
 	&-standard {
 		margin: 0.5em;
@@ -632,10 +650,10 @@ header {
 			text-decoration: none;
 			color: $bg-dark;
 			font-weight: 500;
-			transition: color .3s;
+			transition: color 0.3s;
 		}
 		a:hover {
-			color: $info-color;
+			color: $main-color;
 		}
 	}
 }
@@ -655,9 +673,10 @@ header {
 			text-decoration: none;
 			color: $section-pure;
 			font-weight: bold;
+			transition: color 0.3s;
 		}
 		a:hover {
-			color: $info-color;
+			color: $main-color;
 		}
 	}
 	&-line {
@@ -673,9 +692,10 @@ header {
 			text-decoration: none;
 			font-weight: bold;
 			color: $info-color;
+			transition: color 0.3s;
 		}
 		& .name:hover {
-			color: $section-pure;
+			color: $main-color;
 		}
 	}
 }
@@ -689,7 +709,6 @@ header {
 			}
 		}
 	}
-	
 }
 @media (min-width: 768px) {
 	// .title {
@@ -731,12 +750,12 @@ header {
 				flex-wrap: nowrap;
 			}
 		}
-	// 	&-h3 {
-	// 		font-size: 2.5rem;
-	// 	}
-	// 	&-text {
-	// 		font-size: 2rem;
-	// 	}
+		// 	&-h3 {
+		// 		font-size: 2.5rem;
+		// 	}
+		// 	&-text {
+		// 		font-size: 2rem;
+		// 	}
 	}
 	.offers {
 		&-container {
@@ -760,7 +779,6 @@ header {
 }
 
 @media (min-width: 992px) {
-
 	.title {
 		font-size: 3rem;
 	}
@@ -805,11 +823,10 @@ header {
 	}
 	.text {
 		h3 {
-			font-size:2.5rem;
+			font-size: 2.5rem;
 		}
 		p {
 			font-size: 1.8rem;
 		}
 	}
-
 }
