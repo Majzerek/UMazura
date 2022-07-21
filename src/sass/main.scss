@@ -227,7 +227,7 @@ header {
 		height: 100vh;
 		z-index: 5;
 		h1 {
-			font-size: 3rem;
+			font-size: 2.5rem;
 			text-transform: uppercase;
 			text-shadow: 2px 2px 8px $footer-bg;
 		}
@@ -278,7 +278,7 @@ header {
 
 	.fa-chevron-down {
 		padding: 0.5em;
-		font-size: 4rem;
+		font-size: 3rem;
 		color: $text-main;
 		transition: color 0.3s;
 		animation: bounce-top 4s infinite step-end;
@@ -292,7 +292,7 @@ header {
 		position: absolute;
 		bottom: 8%;
 		left: 50%;
-		font-size: 4rem;
+		font-size: 3rem;
 		color: $text-main;
 		border: 3px solid $text-main;
 		border-radius: 50%;
@@ -327,7 +327,7 @@ header {
 	width: 100%;
 	height: 40%;
 	text-align: center;
-	font-size: 2.2rem;
+	font-size: 2rem;
 	&-container {
 		margin-bottom: 2em;
 		width: 100%;
@@ -363,7 +363,7 @@ header {
 	}
 	&-h3 {
 		text-align: center;
-		font-size: 2.5rem;
+		font-size: 2rem;
 		color: $section-pure;
 		border-bottom: 8px solid $bg-dark;
 	}
@@ -773,7 +773,7 @@ header {
 
 		.hero-text {
 			h1 {
-				font-size: 5rem;
+				font-size: 4rem;
 			}
 
 			p {
@@ -785,14 +785,14 @@ header {
 		}
 	}
 	.card {
-		font-size: 4rem;
+		font-size: 3rem;
 		&__info-text {
 			font-size: 2rem;
 		}
 	}
 	.aboutus {
 		&-h3 {
-			font-size: 3.5rem;
+			font-size: 3rem;
 		}
 		&-text {
 			font-size: 2.5rem;
@@ -809,7 +809,7 @@ header {
 	}
 	.text {
 		h3 {
-			font-size: 4rem;
+			font-size: 3rem;
 		}
 		p {
 			font-size: 2rem;
