@@ -208,7 +208,7 @@ header {
 			text-transform: uppercase;
 			text-shadow: 2px 2px 8px $footer-bg;
 		}
-		
+
 		p {
 			font-size: 1.5rem;
 		}
@@ -233,7 +233,7 @@ header {
 
 	.outline {
 		margin-top: 0.3em;
-		padding: .5em;
+		padding: 0.5em;
 		border: 2px solid $text-main;
 		border-radius: 15px;
 		box-shadow: -2px 2px 5px $text-main;
@@ -331,7 +331,6 @@ header {
 //section about us
 .aboutus {
 	background-color: $bg-dark;
-	
 
 	&-title {
 		color: $section-pure;
@@ -366,13 +365,11 @@ header {
 		border-radius: 10px;
 		overflow: hidden;
 		flex-wrap: wrap;
-		
 	}
 	&-container {
 		margin-bottom: 1em;
 		width: 100%;
 		height: 100%;
-		
 
 		img {
 			margin: 0;
@@ -391,19 +388,12 @@ header {
 			align-items: center;
 		}
 	}
-	.quotes-text {
-		display: flex;
-		justify-content: center;
-		text-align: center;
-		font-size: 1.5rem;
-		font-weight:600;
-		font-family:  cursive;
-	}
+
 	&__title-quote {
 		margin: 2em auto 1em auto;
 		text-align: center;
 		color: $section-pure;
-		font-size: 2.5rem;
+		font-size: 3rem;
 	}
 
 	&-quotes {
@@ -420,12 +410,33 @@ header {
 			margin-bottom: 3em;
 			width: 100%;
 			height: 100%;
-			background-color: $section-pure;
-			border: 4px solid $main-color;
-		
+			background-color: transparent;
 		}
 	}
-	
+	.quotes-text {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 1.5rem;
+		font-weight: 600;
+		font-style: italic;
+	}
+	.link {
+		margin-top: 2em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		text-align: center;
+		font-size: 1.6rem;
+		a {
+			text-decoration: none;
+			color: $section-pure;
+		}
+		a:hover {
+			color: $info-color;
+		}
+	}
 }
 //offers
 .offers {
@@ -583,6 +594,7 @@ header {
 		margin: 0.5em;
 		p {
 			padding: 1em;
+			font-size: 1.8rem;
 			font-weight: bold;
 		}
 		a {
@@ -705,6 +717,11 @@ header {
 	.contact {
 		font-size: 2.5rem;
 		background-image: url('../img/header.jpg');
+		&-standard {
+			p {
+				font-size: 3.5rem;
+			}
+		}
 	}
 }
 
@@ -722,7 +739,7 @@ header {
 			h1 {
 				font-size: 5rem;
 			}
-	
+
 			p {
 				font-size: 3rem;
 			}
