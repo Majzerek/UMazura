@@ -80,6 +80,29 @@ body {
 		transform: scale(1.1);
 	}
 }
+.fade-in {
+	opacity: 0;
+	transition: opacity 400ms ease-in;
+} 
+.fade-in.appear {
+	opacity: 1;
+}
+.from-right {
+	transform: translateX(50%);
+	opacity: 0;
+}
+.from-left {
+	transform: translateX(-50%);
+	opacity: 0;
+}
+.from-right, .from-left{
+	transition:opacity 400ms, transform 400ms ease-in;
+}
+.from-right.appear, .from-left.appear{
+	transform: translateX(0);
+	opacity: 1;
+}
+
 // NAV
 .burger-btn {
 	position: fixed;
@@ -454,6 +477,7 @@ header {
 		justify-content: center;
 		align-items: center;
 		color: $bg-dark;
+		
 		&__cards {
 			padding: 2em;
 			display: flex;

@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	const allSections = document.querySelectorAll('.section');
 	const quote = document.querySelector('.quotes-text');
 
+	const faders = document.querySelectorAll('.fade-in');
+	const sliders = document.querySelectorAll('.slide-in')
+
+
+
 	const quotes = [
 		' "Najlepsza część życia ludzkiego to małe, bezimienne i zapomniane akty dobroci i miłości" <br>William Wordsworth',
 		' "Ludzie którzy nigdy nie mają czasu, czynią najmniej." <br>Georg Christoph Lichtenberg',
@@ -30,12 +35,37 @@ document.addEventListener('DOMContentLoaded', function () {
 		' "Charakter człowieka najlepiej określa się przez to, co uznaje on za śmieszne."<br>Johann Wolfgang von Goethe', ' "Trzeba śmiać się nie czekając na szczęście, bo gotowiśmy umrzeć, nie uśmiechnąwszy się ani razu."<br>Jean de La Bruyère', ' "Ze wszystkich zwierząt tylko człowiek umie się śmiać, bo też ma najwięcej ku temu powodów."<br>Ernest Hemingway', ' "Najszlachetniejsze wykorzystanie wolności polega na jednoczeniu obywateli, nie na tworzeniu podziałów."<br>M.R.Kopmeyer', ' "Nie ma słowa, któremu by dawano więcej rozmaitych znaczeń i które by w tyle sposobów przemawiało do ludzi, co słowo "wolność"."<br>Monteskiusz', ' "Wolność zawsze jest tragiczna, nie ma wolności bezwzględnej, wolność jest zawsze od czegoś."<br>Stefan Napieralski', ' "...serce, to niepoprawne serce, bardziej niż jakiegokolwiek innego daru ziemskiego, bardziej nawet niż samego życia, pragnie spokoju."<br>Joseph Conrad', ' "Czymże jest wielkie, szlachetne serce, jeśli nie natchnieniem w stanie nieustającego czynu?"<br>Zygmunt Krasiński', ' "Długa jest droga wiodąca od rozumu do serca."<br>Gottfried Wilhelm Leibniz', ' "Każde serce ma ciemne zakątki, Gdzie są boleści, głupstwa i szczęścia pamiątki."<br>Adam Mickiewicz'
 	];
 
+
+	//apper text observer
+const appearOptions = {
+	threshold: 0,
+	rootMargin: "0px 0px -350px 0px"
+}
+	const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+		entries.forEach(entry => {
+			if(!entry.isIntersecting) {
+				return;
+			} else {
+				entry.target.classList.add('appear');
+				appearOnScroll.unobserve(entry.target);
+			}
+		})
+	}, appearOptions)
+
+	faders.forEach(fader => {
+		appearOnScroll.observe(fader);
+	})
+
+	sliders.forEach(slider => {
+		appearOnScroll.observe(slider)
+	})
+// quote random
 	const handleQuote = () => {
 		let a = Math.floor(Math.random() * quotes.length);
 		quote.innerHTML = `<span>Cytat:</span>&nbsp;${quotes[a]}`;
 	};
 	handleQuote();
-
+//Navigation
 	const handleNav = () => {
 		nav.classList.toggle('nav--active');
 
@@ -77,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 	};
-
+//year
 	const handleCurrentYear = () => {
 		const year = new Date().getFullYear();
 		footerYear.innerHTML = year;
