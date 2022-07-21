@@ -129,10 +129,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	navBtn.addEventListener('click', handleNav);
 	window.addEventListener('scroll', handleObserver);
 	newsBtn.addEventListener('click', () => {
-		if (newsCard.style.display == 'none') {
-			newsCard.style.display = 'block';
-		} else {
+		if (newsCard.style.display == 'block') {
 			newsCard.style.display = 'none';
+		} else {
+			newsCard.style.display = 'block';
 		}
 	});
 });
