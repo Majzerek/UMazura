@@ -7,10 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	const allSections = document.querySelectorAll('.section');
 	const quote = document.querySelector('.quotes-text');
 
-	const newsCard = document.querySelector('.card');
+	const newsCard = document.querySelector('.news');
 	const newsBtn = document.querySelector('.show-news');
 	const faders = document.querySelectorAll('.fade-in');
 	const sliders = document.querySelectorAll('.slide-in');
+	const arrows = document.querySelectorAll('.fa-regular')
 
 	const quotes = [
 		' "Najlepsza część życia ludzkiego to małe, bezimienne i zapomniane akty dobroci i miłości" <br>William Wordsworth',
@@ -129,10 +130,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	navBtn.addEventListener('click', handleNav);
 	window.addEventListener('scroll', handleObserver);
 	newsBtn.addEventListener('click', () => {
-		if (newsCard.style.display == 'block') {
-			newsCard.style.display = 'none';
+		newsCard.classList.toggle('opened')
+		if (newsCard.classList.contains('opened')) {
+			arrows.forEach(arrow => {arrow.style.transform = 'rotate(180deg)'});
 		} else {
-			newsCard.style.display = 'block';
+			arrows.forEach( arrow => {
+				arrow.style.transform = 'rotate(0)'});
 		}
 	});
 });

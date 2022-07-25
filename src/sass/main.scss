@@ -103,21 +103,32 @@ body {
 	opacity: 1;
 }
 .show-news {
-	margin-top: 1em;
+	position: absolute;
+	top: 96%;
+	left: 76%;
+	transform: translate(-79%, 90%);
 	padding: 0.5em;
 	font-size: 1.8rem;
-	width: 100%;
+	width: 90%;
 	color: $section-pure;
 	border: none;
 	background-color: $section-light;
-	box-shadow: 2px 2px 8px $section-pure;
+	box-shadow: 6px 4px 6px $section-pure;
+	border-radius: 8px;
 	font-weight: bold;
 	cursor: pointer;
 	transition: background-color 0.3s;
 }
-.show-news:hover {
+.show-news:hover,
+.show-news:focus {
+	outline: none;
 	background-color: $main-color;
 }
+.news.opened {
+	height: 500px;
+	background-color: $section-pure;
+}
+
 // NAV
 .burger-btn {
 	position: fixed;
@@ -335,15 +346,19 @@ header {
 }
 // section News
 .news {
+	position: relative;
 	width: 100%;
+	height: 0;
 	background-color: $bg-dark;
+	background-attachment: fixed;
+	transition: height 0.6s, background-color .6s;
 }
 .card {
-	display: none;
 	width: 100%;
 	height: 100%;
 	text-align: center;
 	font-size: 2rem;
+	overflow: auto;
 	&-container {
 		margin-bottom: 2em;
 		width: 100%;
@@ -372,6 +387,7 @@ header {
 	background-color: $bg-dark;
 
 	&-title {
+		margin-top: 1em;
 		color: $section-pure;
 	}
 	h3 {
@@ -472,7 +488,7 @@ header {
 			transition: color 0.5s;
 		}
 		a:hover {
-			color: $section-light;
+			color: $main-color;
 		}
 	}
 }
@@ -640,7 +656,10 @@ header {
 	}
 	&-standard {
 		margin: 0.5em;
+		padding: 1em;
+		overflow: hidden;
 		p {
+			margin: 0.5em;
 			padding: 1em;
 			font-size: 1.8rem;
 			font-weight: bold;
@@ -648,14 +667,58 @@ header {
 			text-shadow: 2px 2px 8px $bg-dark;
 		}
 		a {
+			margin-left: 0.5em;
+			padding: 0.2em;
+			position: relative;
 			text-decoration: none;
 			color: $section-pure;
 			text-shadow: 2px 2px 8px $bg-dark;
 			font-weight: 500;
-			transition: color 0.3s;
+			border: 1px solid transparent;
+			border-radius: 0;
+			overflow: visible;
+			transition: 0.8s;
+		}
+		a::before,
+		a::after {
+			display: block;
+			position: absolute;
+			content: '';
+			transition: all 0.3s;
+			z-index: -1;
+		}
+		a::before,
+		a::after {
+			width: 100%;
+			height: 100%;
+		}
+		a::after {
+			bottom: 0;
+			right: 0;
+		}
+		a::before {
+			top: 0;
+			left: 0;
 		}
 		a:hover {
+			border: 1px dotted transparent;
 			color: $main-color;
+		}
+
+		a:hover::after {
+			bottom: -10px;
+			right: -10px;
+			border-bottom: 5px dotted $main-color;
+			border-right: 5px dotted $main-color;
+			border-radius: 7px;
+		}
+
+		a:hover::before {
+			top: -10px;
+			left: -10px;
+			border-top: 5px dotted $main-color;
+			border-left: 5px dotted $main-color;
+			border-radius: 7px;
 		}
 	}
 }
@@ -714,51 +777,12 @@ header {
 	}
 }
 @media (min-width: 768px) {
-	// .title {
-	// 	font-size: 2.5rem;
-	// }
-	// header {
-	// 	color: white;
-
-	// 	.hero-text {
-	// 		h1 {
-	// 			font-size: 3rem;
-	// 		}
-	// 		p {
-	// 			font-size: 2rem;
-	// 		}
-	// 	}
-	// 	.hero-img {
-	// 		background-image: url('../img/header.jpg');
-	// 	}
-	// }
-
-	// .card {
-	// 	font-size: 2.5rem;
-	// 	&__info-text {
-	// 		font-size: 2rem;
-	// 	}
-	// }
-	// .text {
-	// 	h3 {
-	// 		font-size: 2rem;
-	// 	}
-	// 	p {
-	// 		font-size: 1.5rem;
-	// 	}
-	// }
 	.aboutus {
 		&-box {
 			&__info {
 				flex-wrap: nowrap;
 			}
 		}
-		// 	&-h3 {
-		// 		font-size: 2.5rem;
-		// 	}
-		// 	&-text {
-		// 		font-size: 2rem;
-		// 	}
 	}
 	.offers {
 		&-container {
