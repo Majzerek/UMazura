@@ -78,6 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		quote.innerHTML = `<span>Cytat:</span>&nbsp;${quotes[a]}`;
 	};
 	handleQuote();
+
+	
 	//Navigation
 	const handleNav = () => {
 		nav.classList.toggle('nav--active');

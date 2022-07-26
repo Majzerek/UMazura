@@ -68,12 +68,12 @@ body {
 	img {
 		width: 100%;
 		height: 100%;
-
-		max-width: 500px;
-		max-height: 300px;
+		max-width: 400px;
+		max-height: 400px;
 		border-radius: 10px;
 		box-shadow: 2px 2px 8px $bg-dark;
 		transition: transform 0.3s;
+		object-fit: cover;
 	}
 	img:hover {
 		transform: scale(1.1);
@@ -132,8 +132,6 @@ body {
 	background-color: $section-pure;
 }
 
-
-
 // NAV
 .burger-btn {
 	position: fixed;
@@ -156,6 +154,15 @@ body {
 		.burger-btn__bars::before {
 			width: 100%;
 		}
+	}
+
+	& i {
+		padding: 0.5em;
+		font-size: 2.5rem;
+		transition: color 0.3s;
+	}
+	& i:hover {
+		color: $info-color;
 	}
 
 	&__box {
@@ -213,7 +220,7 @@ body {
 		display: block;
 		margin: 0.5em 0;
 		padding: 0.5em 2em;
-		font-size: 2.8rem;
+		font-size: 1.8rem;
 		color: $section-pure;
 		text-decoration: none;
 
@@ -260,7 +267,8 @@ header {
 		h1 {
 			font-size: 2.5rem;
 			text-transform: uppercase;
-			text-shadow: 2px 2px 8px $footer-bg;
+			color: $section-pure;
+			text-shadow: 2px 2px 8px #f16;
 		}
 
 		p {
@@ -331,8 +339,8 @@ header {
 		z-index: 20;
 		&::before {
 			position: absolute;
-			top: -4%;
-			left: -4%;
+			top: -5%;
+			left: -5%;
 			width: 100%;
 			height: 100%;
 			content: '';
@@ -388,7 +396,8 @@ header {
 	}
 }
 //section about us
-.aboutus {
+.aboutus,
+.blog {
 	background-color: $bg-dark;
 
 	&-title {
@@ -397,6 +406,9 @@ header {
 	}
 	h3 {
 		color: $bg-dark;
+	}
+	&-box {
+		width: 80%;
 	}
 	&-h3 {
 		text-align: center;
@@ -407,7 +419,6 @@ header {
 	&-text {
 		margin: 0.5em;
 		padding: 1em;
-		// max-width: 800px;
 		color: $bg-dark;
 		font-size: 1.5rem;
 		text-align: center;
@@ -418,7 +429,6 @@ header {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
 		color: $bg-dark;
 		background-color: $section-pure;
 		box-shadow: 0 0 18px $section-pure;
@@ -487,7 +497,6 @@ header {
 		align-items: center;
 		text-align: center;
 		font-size: 1.2rem;
-		
 	}
 	a {
 		margin-top: 1em;
@@ -498,13 +507,11 @@ header {
 		border-radius: 0;
 		transition: color 0.5s, border 0.1s;
 	}
-	
+
 	a:hover {
 		color: $main-color;
-		border-bottom:2px dotted $main-color;
+		border-bottom: 2px dotted $main-color;
 	}
-
-	
 }
 //offers
 .offers {
@@ -518,7 +525,7 @@ header {
 		justify-content: center;
 		align-items: center;
 		height: 100%;
-		width: 90%;
+		width: 80%;
 		color: $bg-dark;
 
 		&__cards {
@@ -691,7 +698,7 @@ header {
 			border: 1px solid transparent;
 			border-radius: 0;
 			overflow: visible;
-			transition: color 0.3s, border .3s;
+			transition: color 0.3s, border 0.3s;
 		}
 		a::before,
 		a::after {
@@ -743,7 +750,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	height: 100px;
+	height: 69px;
 	font-size: 1.2rem;
 	background-color: $footer-bg;
 	&-creator {
@@ -778,11 +785,106 @@ header {
 		}
 	}
 }
+// page blog
+.main-blog {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-image: url('../img/header-mobile.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	z-index: 0;
+	&__title {
+		position: absolute;
+		top: 0;
+		position: fixed;
+		margin-top: -2.5em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 200px;
+		width: 60%;
+		text-align: center;
+		font-size: 1.5rem;
+		color: $section-pure;
+		text-shadow: 2px 2px 8px $info-color;
+		background-image: url('../img/header-mobile.jpg');
+		background-size: cover;
+		background-position: center;
+		object-fit: cover;
+		border: 2px solid $footer-bg;
+		border-radius: 50%;
+		box-shadow: 2px 2px 8px $section-pure;
+		z-index: 3;
+		&-bg {
+			position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color:rgba(0,0,81, .2)  ;
+		border-radius: 50%;
+		z-index: -10;
+		}
+	}
+
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: $blue-gradient;
+		z-index: -10;
+	}
+}
+.blog {
+	margin: 14em auto 4em;
+	color: $section-pure;
+	height: 100%;
+	width: 80%;
+	z-index: 0;
+	background-color: $bg-dark;
+	box-shadow: 2px 2px 8px $section-pure;
+	h2 {
+		margin-top: 4em;
+	}
+	hr {
+		width: 100%;
+	}
+	&-article {
+		margin: 0.5em;
+		padding: 2em;
+		height: 100%;
+		width: 80%;
+		display: flex;
+		text-align: center;
+		flex-direction: column;
+		align-items: center;
+		h3 {
+			padding: 1em;
+			color:$section-pure;
+			font-size: 1.8rem;
+		}
+		p {
+			padding: 1em;
+			font-size: 1.5rem;
+		}
+		a {
+			text-align: center;
+		}
+		span{
+			font-weight: bold;
+		}
+		ul{
+			font-size: 1.5em;
+			text-align: left;
+		};
+	}
+}
 
 // Breakpoints
 
 @media (min-width: 576px) {
-
 	.offers {
 		&-container {
 			&__card {
@@ -790,11 +892,9 @@ header {
 			}
 		}
 	}
-	
 }
 @media (min-width: 768px) {
 	.aboutus {
-		
 		&-box {
 			&__info {
 				flex-wrap: nowrap;
@@ -822,7 +922,7 @@ header {
 	}
 	.img {
 		img {
-			min-width: 500px;
+			min-width: 400px;
 			min-height: 200px;
 		}
 	}
@@ -831,6 +931,11 @@ header {
 @media (min-width: 992px) {
 	.title {
 		font-size: 2.5rem;
+	}
+	.nav {
+		&__item {
+			font-size: 2.6rem;
+		}
 	}
 	header {
 		color: white;
@@ -857,7 +962,7 @@ header {
 	}
 	.aboutus {
 		&-title {
-			margin-top: 1.5em
+			margin-top: 1.5em;
 		}
 		&-h3 {
 			font-size: 2rem;
@@ -882,5 +987,15 @@ header {
 		p {
 			font-size: 1.8rem;
 		}
+	}
+	.main-blog {
+		background-image: url('../img/header.jpg');
+		&__title {
+			background-image: url('../img/header.jpg');
+		}
+	}
+	.blog {
+		width: 60%;
+		
 	}
 }
